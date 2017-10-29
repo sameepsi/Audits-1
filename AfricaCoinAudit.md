@@ -41,7 +41,7 @@ This attack affects ERC20 tokens, was discovered by the Golem team and consists 
   Then he buys tokens by removing the last zero:  
   Buy 1000 tokens from account `0xiofa8d97756as7df5sd8f75g8675ds8gsdg`  
 
-  If the token contract has enought amount of tokens and the buy function doesn’t check the length of the address of the sender, the Ethereum’s virtual machine will just add zeroes to the transaction until the address is complete.  
+  If the token contract has enough amount of tokens and the buy function doesn’t check the length of the address of the sender, the Ethereum’s virtual machine will just add zeroes to the transaction until the address is complete.  
 
   The virtual machine will return 256000 for each 1000 tokens bought. This is a bug of the virtual machine that’s yet not fixed so whenever you want to buy tokens make sure to check the length of the address.  
 
